@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -9,19 +10,19 @@ const Footer: React.FC = () => {
             © Alle Rechte vorbehalten Tennis Club Wehen e.V. 2024
           </div>
           <div className="flex space-x-6">
-            <a 
-              href="/datenschutz" 
+            <Link
+              to="/datenschutz"
               className="text-tennis-green hover:text-tennis-green-dark transition-colors duration-200 text-sm"
             >
               Datenschutz
-            </a>
+            </Link>
             <span className="text-gray-400">|</span>
-            <a 
-              href="/impressum" 
+            <Link
+              to="/impressum"
               className="text-tennis-green hover:text-tennis-green-dark transition-colors duration-200 text-sm"
             >
               Impressum
-            </a>
+            </Link>
           </div>
         </div>
       </div>

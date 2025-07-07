@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { Link } from 'react-router-dom'
 import { content } from '../data/content'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -126,15 +127,27 @@ const Mitgliedschaft: FC = () => {
             </div>
             
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center reveal-hidden">
-              <a 
-                href="mailto:kontakt@tc-wehen.de" 
-                className="group relative"
-              >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-tcwehen-primary to-tcwehen-accent rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-tcwehen-primary hover:bg-tcwehen-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105">
-                  Kontakt aufnehmen
-                </div>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/kontakt"
+                  className="group relative"
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-tcwehen-primary to-tcwehen-accent rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                  <div className="relative bg-tcwehen-primary hover:bg-tcwehen-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105">
+                    Kontakt aufnehmen
+                  </div>
+                </Link>
+
+                <a
+                  href="mailto:kontakt@tc-wehen.de"
+                  className="group relative"
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                  <div className="relative bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105">
+                    📧 E-Mail senden
+                  </div>
+                </a>
+              </div>
               
               <div className="text-gray-400 text-lg">oder</div>
               

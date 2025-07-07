@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { Link } from 'react-router-dom'
 import { content } from '../data/content'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -109,15 +110,15 @@ const Sponsoren: FC = () => {
             </div>
             
             <div className="flex justify-center reveal-hidden">
-              <a 
-                href="/kontakt"
+              <Link
+                to="/kontakt"
                 className="group relative"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-tcwehen-primary to-tcwehen-accent rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
                 <div className="relative bg-tcwehen-primary hover:bg-tcwehen-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105">
                   Partnerschaft anfragen
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
