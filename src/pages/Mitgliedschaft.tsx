@@ -126,7 +126,7 @@ const Mitgliedschaft: FC = () => {
               </p>
             </div>
             
-            <div className="flex justify-center reveal-hidden">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 reveal-hidden">
               <Link
                 to="/kontakt"
                 className="group relative"
@@ -136,10 +136,10 @@ const Mitgliedschaft: FC = () => {
                   Kontakt aufnehmen
                 </div>
               </Link>
-              
-              <div className="text-gray-400 text-lg">oder</div>
-              
-              <a 
+
+              <div className="text-gray-400 text-xl font-light">oder</div>
+
+              <a
                 href={content.mitgliedschaft.links[1].url}
                 target="_blank"
                 rel="noopener noreferrer"
